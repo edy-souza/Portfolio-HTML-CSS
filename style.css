@@ -48,6 +48,9 @@ body {
     gap: 32px;
 }
 .apresentacao__links__botao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
     border: 2px solid #22d4fd;
     width: 378px;
     text-align: center;
@@ -62,6 +65,6 @@ body {
 
 .apresentacao__links__subtitulo{
     font-family: 'krona One', sans-seref;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 24px;
 }
