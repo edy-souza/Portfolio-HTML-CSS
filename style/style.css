@@ -30,12 +30,75 @@ body {
     gap: 80px;
 }
 
-.cabecalho__menu__link {
+.cabecalho__menu__link{
+    font-family: var(--fonte-segundaria); /* Define a fonte a ser usada para o texto */
+    font-size: 24px; /* Define o tamanho da fonte em 24 pixels */
+    font-weight: 600;  /* Define a espessura da fonte como negrito (600) */
+    color: var(--cor-secundaria); /* Define a cor do texto usando uma variável CSS chamada '--cor-secundaria' */
+    text-decoration: none;     /* Remove a decoração de sublinhado dos links */
+    padding: 3px 10px; /* Define o preenchimento (espaço interno) do link, 3 pixels acima/abaixo e 10 pixels à esquerda/direita */
+    margin: 0 10px;  /* Define a margem externa do link, 0 pixels acima/abaixo e 10 pixels à esquerda/direita */
+    border-radius: 5px; /* Define o raio de borda para arredondar os cantos do link em 5 pixels */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.contato{
     font-family: var(--fonte-segundaria);
     font-size: 24px;
     font-weight: 600;
-    color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
     text-decoration: none;
+    margin: 0 10px;
+    border: none;
+    border-radius: 0px 10px 0px 10px;
+    position: relative;
+    transition: color 03s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block; /* Para tornar o botão inline com o texto */ 
+}
+
+.contato:hover{
+    color: var(--cor-terciaria);
+}
+
+.contato::after{
+    content: ""; /* Adiciona um conteúdo vazio ao pseudo-elemento */
+    position: absolute; 
+    left: 0; /* Inicia a linha sublinhada no canto esquerdo */
+    bottom: 0; /* Define a posição no fundo do elemento pai */
+    width: 100%; /* Cobrir a largura completa do link */
+    height: 2px; /* Altura da linha sublinhada */
+    background-color: var(--cor-secundaria); 
+    transform: scaleX(0);
+    transform-origin: left; 
+    transition: transform 0.3s ease; 
+}
+
+.contato:hover::after{
+    transform: scaleX(0.75);
+}
+
+.cabecalho__menu__link::after {
+    content: ""; /* Adiciona um conteúdo vazio ao pseudo-elemento */
+    position: absolute; 
+    left: 0; /* Inicia a linha sublinhada no canto esquerdo */
+    bottom: 0; /* Define a posição no fundo do elemento pai */
+    width: 100%; /* Cobrir a largura completa do link */
+    height: 2px; /* Altura da linha sublinhada */
+    background-color: var(--cor-secundaria); 
+    transform: scaleX(0);
+    transform-origin: left; 
+    transition: transform 0.3s ease; 
+}
+
+.cabecalho__menu__link:hover{
+    color: var(--cor-terciaria);
+}
+
+.cabecalho__menu__link:hover::after{
+    transform: scaleX(0.75);
 }
 
 .titulo-destaque {
@@ -61,9 +124,20 @@ body {
     font-family: var(--fonte-primaria);
 }
 
-.apresentacao__conteudo__texto {
+.apresentacao__conteudo__texto__home {
     font-size: 24px;
     font-family: var(--fonte-segundaria);
+    font-weight: 550;
+}
+
+.apresentacao__conteudo__texto__sobre {
+    font-size: 22px;
+    font-family: var(--fonte-segundaria);
+    font-weight: 10;
+    background-color: rgb(41, 41, 45, 0.7);
+    border-radius: 20px;
+    width: 600px;
+    padding: 20px;
 }
 
 .apresentacao__links {
@@ -99,6 +173,8 @@ body {
     background-color: var(--cor-hover);
 }
 
+
+
 .rodape {
     padding: 10px;
     color: var(--cor-primaria);
@@ -108,3 +184,4 @@ body {
     font-size: 24px;
     font-weight: 400;
 }
+
