@@ -206,3 +206,26 @@ body {
     border: 1px solid #ccc; /* Adiciona uma borda sólida de 1 pixel com cor cinza (#ccc) ao redor das imagens */
     border-radius: 5px; /* Arredonda as bordas das imagens com um raio de 5 pixels */
 }
+
+.carousel {
+    width: 100%; /* Defina a largura desejada, por exemplo, 100% para preencher a largura do contêiner pai */
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    width: 100%; /* Garante que o conteúdo do carrossel seja responsivo */
+    transition: transform 0.5s;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%; /* Garante que cada slide ocupe a largura total do carrossel */
+    
+  }
+  
+  .carousel-slide img {
+    max-width: 100%; /* Para redimensionar as imagens dentro dos slides */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 800px;
+  }
+  

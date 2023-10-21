@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+</head>
+<body style="background-image: url(assets/tecnologia.jpg); background-size: cover; 
+        background-repeat: no-repeat;">
+    <header  class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="certificados.html">Certificados</a>  
+            <a class="contato" href="https://wa.link/fekndw">Contato</a>
+            <a class="cabecalho__menu__link" href="projetos.html">projetos</a>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="assets/Screenshot_1.jpg" alt="Imagem 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/Screenshot_2.jpg" alt="Imagem 2">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector(".carousel");
+        const slides = document.querySelectorAll(".carousel-slide");
+        const container = document.querySelector(".carousel-container");
+        let currentIndex = 0;
+    
+        function showSlide(index) {
+            container.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+    
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+    
+        setInterval(nextSlide, 3000); // Troca de slide automaticamente a cada 3 segundos
+    
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>
