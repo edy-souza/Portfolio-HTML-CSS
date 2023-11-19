@@ -32,7 +32,7 @@ body {
 
 .cabecalho__menu__link{
     font-family: var(--fonte-segundaria); /* Define a fonte a ser usada para o texto */
-    font-size: 24px; /* Define o tamanho da fonte em 24 pixels */
+    font-size: 1.5rem; /* Define o tamanho da fonte em 24 pixels */
     font-weight: 600;  /* Define a espessura da fonte como negrito (600) */
     color: var(--cor-secundaria); /* Define a cor do texto usando uma variável CSS chamada '--cor-secundaria' */
     text-decoration: none;     /* Remove a decoração de sublinhado dos links */
@@ -43,9 +43,9 @@ body {
     transition: color 0.3s ease;
 }
 
-.contato{
+.contato {
     font-family: var(--fonte-segundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-secundaria);
     text-decoration: none;
@@ -110,28 +110,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2,25rem;
     font-family: var(--fonte-primaria);
 }
 
 .apresentacao__conteudo__texto__home {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-segundaria);
     font-weight: 550;
 }
 
 .apresentacao__conteudo__texto__sobre {
-    font-size: 22px;
+    font-size: 1.38rem;
     font-family: var(--fonte-segundaria);
     font-weight: 10;
     background-color: rgb(41, 41, 45, 0.7);
@@ -152,10 +153,10 @@ body {
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    width: 378px;
+    width: 100%;
     text-align: center;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
@@ -166,7 +167,7 @@ body {
 .apresentacao__links__subtitulo{
     font-family: var(--fonte-primaria);
     font-weight: 200;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .apresentacao__links__botao:hover {
@@ -179,7 +180,7 @@ body {
     background: var(--cor-terciaria);
     text-align: center;
     font-family: var(--fonte-segundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -200,7 +201,7 @@ body {
 }
 
 .certificados img {
-    max-width: 40%; /* Limita a largura máxima das imagens para que elas se ajustem à tela */
+    max-width: 50%; /* Limita a largura máxima das imagens para que elas se ajustem à tela */
     height: auto; /* Mantém a proporção original da imagem */
     margin: 10px; /* Adiciona uma margem de 10 pixels ao redor das imagens */
     border: 1px solid #ccc; /* Adiciona uma borda sólida de 1 pixel com cor cinza (#ccc) ao redor das imagens */
@@ -229,3 +230,35 @@ body {
     max-height: 800px;
   }
   
+  .imagem-edy-souza {
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px var(--cor-terciaria);
+    
+  }
+
+  @media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 6%;
+    }    
+    
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+    .imagem-edy-souza {
+        width: 80vw;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    } 
+
+    .apresentacao__conteudo__texto__sobre {
+        width: 100%;
+    }
+  }
